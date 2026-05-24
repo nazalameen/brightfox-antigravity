@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brightfox Edu Tech | Premium Robotics & Coding Courses for Kids (Ages 5-15)</title>
+    <meta name="description" content="Discover hands-on robotics, electronics, and coding courses tailored for kids aged 5 to 15. Spark creativity, build critical thinking, and design future tech with Brightfox Edu Tech. Book a free trial today!">
+    <meta name="keywords" content="robotics for kids, coding for kids, STEM education, kids robotics class, Arduino kids, Scratch programming, Lego robotics, kids science academy">
+    <meta name="author" content="Brightfox Edu Tech">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Glassmorphic Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo" id="nav-logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <span>Brightfox Edu Tech</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#courses" class="nav-link">Courses</a></li>
+                    <li><a href="#robolab" class="nav-link">RoboLab</a></li>
+                    <li><a href="#benefits" class="nav-link">Benefits</a></li>
+                    <li><a href="#journey" class="nav-link">Our Journey</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                    <li><a href="#faqs" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn btn-primary btn-glow open-modal-btn" id="nav-booking-cta">
+                    <span>Book Free Trial</span>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge" id="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span>Robotics & Coding School (Ages 5 - 15)</span>
+                    </div>
+                    <h1 class="hero-title" id="hero-headline">
+                        Empower Your Child to <span class="gradient-text">Build & Code</span> the Future
+                    </h1>
+                    <p class="hero-subtitle">
+                        Hands-on robotics, electronic circuits, and creative programming designed to transform curious minds into next-generation inventors, engineers, and creators.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-large open-modal-btn" id="hero-primary-cta">
+                            <span>Book Free Trial Class</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <a href="#courses" class="btn btn-secondary btn-large" id="hero-secondary-cta">
+                            <span>Explore Courses</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Stats Grid -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-num" data-val="10000">10,000+</div>
+                            <div class="stat-label">Students Trained</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num" data-val="50">50+</div>
+                            <div class="stat-label">Project Builds</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num" data-val="4.9">4.9/5</div>
+                            <div class="stat-label">Parent Rating</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Visual -->
+                <div class="hero-visual">
+                    <div class="glowing-circle circle-1"></div>
+                    <div class="glowing-circle circle-2"></div>
+                    <div class="robot-frame">
+                        <img src="assets/hero_robot.png" alt="Futuristic Toy Robot Learning Platform" class="hero-robot-img" id="hero-robot-image">
+                    </div>
+                    <!-- Floating Badge Cards -->
+                    <div class="floating-card fc-1" id="fc-creative">
+                        <i class="fa-solid fa-lightbulb icon-yellow"></i>
+                        <div>
+                            <h4>Creative Thinking</h4>
+                            <p>Design from scratch</p>
+                        </div>
+                    </div>
+                    <div class="floating-card fc-2" id="fc-code">
+                        <i class="fa-solid fa-code icon-cyan"></i>
+                        <div>
+                            <h4>Scratch & C++</h4>
+                            <p>Interactive Coding</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Wave Divider -->
+            <div class="wave-divider">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,8.75,57.05,18.3,90.38,27.35,166.4,48.09,242.34,67.87,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Course Catalog Section -->
+        <section class="courses-section" id="courses">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Learning Pathways</span>
+                    <h2 class="section-title">Robotics & Coding Curriculum</h2>
+                    <p class="section-desc">Our courses are meticulously structured into age-appropriate stages, guiding students from fundamental mechanical creation to IoT and Artificial Intelligence.</p>
+                </div>
+
+                <!-- Age Selector Tabs -->
+                <div class="age-filter-container">
+                    <button class="filter-tab active" data-age="all" id="filter-all">
+                        <span>All Courses</span>
+                        <small>Ages 5 - 15</small>
+                    </button>
+                    <button class="filter-tab" data-age="mechano" id="filter-mechano">
+                        <span>Mechano Explorer</span>
+                        <small>Ages 5 - 8</small>
+                    </button>
+                    <button class="filter-tab" data-age="elex" id="filter-elex">
+                        <span>Elex Inventor</span>
+                        <small>Ages 8 - 10</small>
+                    </button>
+                    <button class="filter-tab" data-age="autobots" id="filter-autobots">
+                        <span>Autobot Coder</span>
+                        <small>Ages 10 - 12</small>
+                    </button>
+                    <button class="filter-tab" data-age="mentor" id="filter-mentor">
+                        <span>IoT & AI Mentor</span>
+                        <small>Ages 13 - 15</small>
+                    </button>
+                </div>
+
+                <!-- Course Grid -->
+                <div class="courses-grid" id="courses-grid">
+                    <!-- Mechano Card -->
+                    <article class="course-card" data-age-group="mechano" id="course-card-mechano">
+                        <div class="course-image-wrapper">
+                            <img src="assets/mechano_course.png" alt="Mechano Explorer Course robotics kit" class="course-img">
+                            <span class="course-badge age-badge-pink">Ages 5 - 8</span>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="fa-solid fa-cubes"></i> Level: Beginner</span>
+                                <span><i class="fa-solid fa-clock"></i> 3 Months</span>
+                            </div>
+                            <h3 class="course-name">Mechano Explorer</h3>
+                            <p class="course-description">Perfect entry for young builders. Kids learn mechanical design using gears, levers, pulleys, and simple structural beams to build motorized models. Builds fine motor skills and spatial reasoning.</p>
+                            <div class="course-specs">
+                                <strong>What they build:</strong>
+                                <ul>
+                                    <li><i class="fa-solid fa-gear"></i> Motorized Conveyor Belts</li>
+                                    <li><i class="fa-solid fa-gear"></i> Windmills & Solar-tracked Fans</li>
+                                    <li><i class="fa-solid fa-gear"></i> Wired Remote control Cars</li>
+                                </ul>
+                            </div>
+                            <div class="course-footer">
+                                <span class="course-cost">Interactive Class</span>
+                                <button class="btn btn-secondary open-modal-btn">Enquire Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Elex Card -->
+                    <article class="course-card" data-age-group="elex" id="course-card-elex">
+                        <div class="course-image-wrapper">
+                            <img src="assets/elex_course.png" alt="Elex Inventor Course electronics breadboard" class="course-img">
+                            <span class="course-badge age-badge-purple">Ages 8 - 10</span>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="fa-solid fa-bolt"></i> Level: Novice</span>
+                                <span><i class="fa-solid fa-clock"></i> 4 Months</span>
+                            </div>
+                            <h3 class="course-name">Elex Inventor</h3>
+                            <p class="course-description">Introducing children to the invisible magic of electricity. They build safe electronic circuits on solderless breadboards using LEDs, buzzers, capacitors, potentiometers, and ambient light sensors.</p>
+                            <div class="course-specs">
+                                <strong>What they build:</strong>
+                                <ul>
+                                    <li><i class="fa-solid fa-microchip"></i> Automatic Night Lamps</li>
+                                    <li><i class="fa-solid fa-microchip"></i> Fire Alarm & Rain Detector Systems</li>
+                                    <li><i class="fa-solid fa-microchip"></i> Electronic Piano Keyboards</li>
+                                </ul>
+                            </div>
+                            <div class="course-footer">
+                                <span class="course-cost">Hardware Kit Incl.</span>
+                                <button class="btn btn-secondary open-modal-btn">Enquire Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Autobots Card -->
+                    <article class="course-card" data-age-group="autobots" id="course-card-autobot">
+                        <div class="course-image-wrapper">
+                            <img src="assets/autobot_course.png" alt="Autobot Coder Course autonomous robotics smart car" class="course-img">
+                            <span class="course-badge age-badge-blue">Ages 10 - 12</span>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="fa-solid fa-code"></i> Level: Intermediate</span>
+                                <span><i class="fa-solid fa-clock"></i> 6 Months</span>
+                            </div>
+                            <h3 class="course-name">Autobot Coder</h3>
+                            <p class="course-description">Bridge building and coding. Students assemble custom wheeled robots containing microcontrollers and sensors, programming them using Scratch drag-and-drop block coding to make them autonomous.</p>
+                            <div class="course-specs">
+                                <strong>What they build:</strong>
+                                <ul>
+                                    <li><i class="fa-solid fa-gamepad"></i> Line Following Robots</li>
+                                    <li><i class="fa-solid fa-gamepad"></i> Obstacle Avoidance Smart Cars</li>
+                                    <li><i class="fa-solid fa-gamepad"></i> Smart Parking Gates with Sensors</li>
+                                </ul>
+                            </div>
+                            <div class="course-footer">
+                                <span class="course-cost">Scratch + Arduino</span>
+                                <button class="btn btn-secondary open-modal-btn">Enquire Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Mentor Program Card -->
+                    <article class="course-card" data-age-group="mentor" id="course-card-mentor">
+                        <div class="course-image-wrapper">
+                            <img src="assets/mentor_course.png" alt="Advanced IoT and AI Mentor Course" class="course-img">
+                            <span class="course-badge age-badge-cyan">Ages 13 - 15</span>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="fa-solid fa-terminal"></i> Level: Advanced</span>
+                                <span><i class="fa-solid fa-clock"></i> 8 Months</span>
+                            </div>
+                            <h3 class="course-name">IoT & AI Mentor</h3>
+                            <p class="course-description">For future tech founders and researchers. Advanced concepts using Arduino IDE, C++, and Python. Kids connect their models to the internet (IoT) and write intelligent decision-making logic using AI libraries.</p>
+                            <div class="course-specs">
+                                <strong>What they build:</strong>
+                                <ul>
+                                    <li><i class="fa-solid fa-wifi"></i> IoT Weather Stations & Smart Home Controllers</li>
+                                    <li><i class="fa-solid fa-wifi"></i> Robotic Hand with Gesture Control</li>
+                                    <li><i class="fa-solid fa-wifi"></i> Speech-controlled Assistive Assistant</li>
+                                </ul>
+                            </div>
+                            <div class="course-footer">
+                                <span class="course-cost">C++ & Python Coding</span>
+                                <button class="btn btn-secondary open-modal-btn">Enquire Now</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive "Build-A-Robot" Lab -->
+        <section class="robolab-section" id="robolab">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Interactive Workshop</span>
+                    <h2 class="section-title">The Virtual RoboLab</h2>
+                    <p class="section-desc">Experience our hands-on curriculum right now! Design a custom robot by choosing components below, see the specs change, and power it up!</p>
+                </div>
+
+                <div class="robolab-grid">
+                    <!-- Configurator Panel -->
+                    <div class="lab-config-panel">
+                        <h3 class="panel-title">Choose Components</h3>
+                        
+                        <!-- Step 1: Base -->
+                        <div class="config-group" id="config-group-base">
+                            <label class="config-label">1. Movement Chassis</label>
+                            <div class="config-options">
+                                <button class="opt-btn active" data-type="base" data-value="wheels" id="opt-base-wheels">
+                                    <i class="fa-solid fa-circle-notch"></i>
+                                    <span>High-Speed Wheels</span>
+                                </button>
+                                <button class="opt-btn" data-type="base" data-value="treads" id="opt-base-treads">
+                                    <i class="fa-solid fa-train"></i>
+                                    <span>All-Terrain Treads</span>
+                                </button>
+                                <button class="opt-btn" data-type="base" data-value="legs" id="opt-base-legs">
+                                    <i class="fa-solid fa-spider"></i>
+                                    <span>Spider Legs</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Sensor -->
+                        <div class="config-group" id="config-group-sensor">
+                            <label class="config-label">2. Cognitive Sensor Eye</label>
+                            <div class="config-options">
+                                <button class="opt-btn active" data-type="sensor" data-value="ultrasonic" id="opt-sensor-ultra">
+                                    <i class="fa-solid fa-radar"></i>
+                                    <span>Ultrasonic Eye</span>
+                                </button>
+                                <button class="opt-btn" data-type="sensor" data-value="camera" id="opt-sensor-camera">
+                                    <i class="fa-solid fa-camera"></i>
+                                    <span>Smart AI Camera</span>
+                                </button>
+                                <button class="opt-btn" data-type="sensor" data-value="laser" id="opt-sensor-laser">
+                                    <i class="fa-solid fa-sun"></i>
+                                    <span>Lidar Scanner</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Tool -->
+                        <div class="config-group" id="config-group-utility">
+                            <label class="config-label">3. Utility Mechanism</label>
+                            <div class="config-options">
+                                <button class="opt-btn active" data-type="utility" data-value="gripper" id="opt-utility-gripper">
+                                    <i class="fa-solid fa-hand-holding-hand"></i>
+                                    <span>Pneumatic Gripper</span>
+                                </button>
+                                <button class="opt-btn" data-type="utility" data-value="laser-pointer" id="opt-utility-laser">
+                                    <i class="fa-solid fa-pen-nib"></i>
+                                    <span>Engraving Tool</span>
+                                </button>
+                                <button class="opt-btn" data-type="utility" data-value="display" id="opt-utility-display">
+                                    <i class="fa-solid fa-desktop"></i>
+                                    <span>OLED Screen Face</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Workspace Panel -->
+                    <div class="lab-visual-panel">
+                        <div class="canvas-header">
+                            <span class="status-indicator" id="robot-status-indicator">
+                                <span class="status-dot"></span> SYSTEM IDLE
+                            </span>
+                            <span class="canvas-title">Sandbox Simulator</span>
+                        </div>
+                        
+                        <div class="robot-canvas-body">
+                            <!-- Visual Robot Renderer using CSS & SVG -->
+                            <div class="robot-simulator" id="robot-simulator">
+                                <div class="sim-glow-ring"></div>
+                                <div class="robot-render-wrapper">
+                                    <!-- Eye / Sensor Layer -->
+                                    <div class="robot-component eye-component sensor-ultrasonic" id="render-eye">
+                                        <div class="sensor-unit">
+                                            <span class="eye-lens lens-left"></span>
+                                            <span class="eye-lens lens-right"></span>
+                                        </div>
+                                    </div>
+                                    <!-- Body / Utility Layer -->
+                                    <div class="robot-component body-component utility-gripper" id="render-body">
+                                        <div class="chest-plate">
+                                            <div class="core-power"></div>
+                                            <div class="utility-attachment left-arm"></div>
+                                            <div class="utility-attachment right-arm"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Base Layer -->
+                                    <div class="robot-component base-component base-wheels" id="render-base">
+                                        <div class="base-unit">
+                                            <div class="wheel-left"></div>
+                                            <div class="wheel-axis"></div>
+                                            <div class="wheel-right"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="canvas-actions">
+                            <button class="btn btn-primary" id="power-on-btn">
+                                <i class="fa-solid fa-power-off"></i>
+                                <span>Power On & Run Test</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Diagnostics Panel -->
+                    <div class="lab-diag-panel">
+                        <h3 class="panel-title">Robot Diagnostics</h3>
+                        
+                        <div class="diagnostics-summary">
+                            <h4 id="robot-computed-name">SprintBot-Alpha</h4>
+                            <p class="diag-description" id="robot-computed-desc">A highly mobile robot configured for high-speed indoor navigation. It uses Ultrasonic echoes to map local obstacles and a pneumatic gripper to transport lightweight items.</p>
+                        </div>
+
+                        <div class="diag-specs">
+                            <div class="spec-bar-group">
+                                <div class="bar-info">
+                                    <span>Agility & Speed</span>
+                                    <span id="stat-speed-val">90%</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill" id="stat-speed-bar" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="spec-bar-group">
+                                <div class="bar-info">
+                                    <span>Cognitive intelligence</span>
+                                    <span id="stat-intel-val">40%</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill" id="stat-intel-bar" style="width: 40%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="spec-bar-group">
+                                <div class="bar-info">
+                                    <span>Object Manipulation</span>
+                                    <span id="stat-manip-val">80%</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill" id="stat-manip-bar" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="diag-log">
+                            <div class="log-title"><i class="fa-solid fa-terminal"></i> Console Log</div>
+                            <div class="log-output" id="lab-console-log">
+                                <p class="log-line">> Ready for execution.</p>
+                                <p class="log-line">> Click 'Power On' to run diagnostics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section" id="benefits">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Why Choose Us</span>
+                    <h2 class="section-title">More Than Just Coding</h2>
+                    <p class="section-desc">Building robots helps kids develop multiple high-value cognitive and soft skills that prepare them for success in any career path.</p>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card card-teal" id="benefit-card-1">
+                        <div class="benefit-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3>Logical Problem Solving</h3>
+                        <p>When a robot does not run correctly, kids learn to trace bugs logically, test assumptions, and learn from mistakes without frustration.</p>
+                    </div>
+
+                    <div class="benefit-card card-violet" id="benefit-card-2">
+                        <div class="benefit-icon"><i class="fa-solid fa-palette"></i></div>
+                        <h3>Hands-on Creativity</h3>
+                        <p>Turning abstract thoughts into mechanical real-world structures teaches kids how to combine design thinking with mathematical precision.</p>
+                    </div>
+
+                    <div class="benefit-card card-pink" id="benefit-card-3">
+                        <div class="benefit-icon"><i class="fa-solid fa-users"></i></div>
+                        <h3>Collaboration & Teamwork</h3>
+                        <p>Students work in pairs or groups to resolve mechanical tasks, assigning roles, discussing code logic, and achieving milestones together.</p>
+                    </div>
+
+                    <div class="benefit-card card-blue" id="benefit-card-4">
+                        <div class="benefit-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h3>Confidence Booster</h3>
+                        <p>Completing physical, functional robot models provides kids a huge sense of self-belief and boosts confidence in their academic pursuits.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey Section -->
+        <section class="journey-section" id="journey">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Learning Journey</span>
+                    <h2 class="section-title">How Kids Learn at Brightfox</h2>
+                    <p class="section-desc">Our project-based learning model is centered around the natural discovery process, fostering structural, analytical, and communications skills.</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-step step-left">
+                        <div class="step-badge">1</div>
+                        <div class="step-card">
+                            <span class="step-icon"><i class="fa-solid fa-wrench"></i></span>
+                            <h3>1. Discover & Build</h3>
+                            <p>Every class starts with a structural puzzle. Students assemble real gears, sensors, and structural items, exploring mechanical physics firsthand.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step step-right">
+                        <div class="step-badge">2</div>
+                        <div class="step-card">
+                            <span class="step-icon"><i class="fa-solid fa-keyboard"></i></span>
+                            <h3>2. Program & Code</h3>
+                            <p>Using Scratch block-coding or Arduino C++, kids create the robotic logic. They learn loops, conditional statements, variables, and algorithms.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step step-left">
+                        <div class="step-badge">3</div>
+                        <div class="step-card">
+                            <span class="step-icon"><i class="fa-solid fa-circle-play"></i></span>
+                            <h3>3. Test & Calibrate</h3>
+                            <p>We test our robots in real-world setups like maze courses and tracking maps. Students adjust threshold parameters to perfect their robot's behavior.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step step-right">
+                        <div class="step-badge">4</div>
+                        <div class="step-card">
+                            <span class="step-icon"><i class="fa-solid fa-trophy"></i></span>
+                            <h3>4. Present & Compete</h3>
+                            <p>Students present their robots to parents and peers. Friendly classroom challenges and annual competitions motivate kids to push design boundaries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Reviews</span>
+                    <h2 class="section-title">Loved by Parents, Approved by Kids</h2>
+                    <p class="section-desc">See how our curriculum is driving practical learning and building technological confidence in kids.</p>
+                </div>
+
+                <!-- Testimonial Slider -->
+                <div class="slider-wrapper">
+                    <div class="testimonials-slider" id="testimonials-slider">
+                        <!-- Slide 1 -->
+                        <div class="testimonial-slide active">
+                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                            <p class="quote-text">My 8-year-old son Aarav is obsessed with the Elex Inventor course. He built a rain detector sensor for our balcony! The curriculum isn't just about reading books; it's completely active. He's learning math concepts without realizing it.</p>
+                            <div class="quote-author">
+                                <div class="author-avatar"><span class="avatar-letter">S</span></div>
+                                <div class="author-meta">
+                                    <h4>Shalini Sharma</h4>
+                                    <span>Mother of Aarav (Age 8)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="testimonial-slide">
+                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                            <p class="quote-text">The Autobot Coder course has given my daughter Rhea a clear goal. She loves block coding and watching her robot car navigate hurdles. The teachers explain code bugs in a super simple, friendly way. It's the highlight of her week!</p>
+                            <div class="quote-author">
+                                <div class="author-avatar"><span class="avatar-letter">V</span></div>
+                                <div class="author-meta">
+                                    <h4>Vikram Mehta</h4>
+                                    <span>Father of Rhea (Age 11)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="testimonial-slide">
+                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                            <p class="quote-text">Incredible curriculum! My 14-year-old built a custom speech controlled door lock. He is learning Arduino IDE and C++ syntax which is preparing him wonderfully for computer science. Highly recommend Brightfox Edu Tech!</p>
+                            <div class="quote-author">
+                                <div class="author-avatar"><span class="avatar-letter">A</span></div>
+                                <div class="author-meta">
+                                    <h4>Amit Patel</h4>
+                                    <span>Father of Kabir (Age 14)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <div class="slider-controls">
+                        <button class="ctrl-btn" id="prev-slide" aria-label="Previous Slide">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <div class="slider-dots" id="slider-dots">
+                            <span class="dot active" data-index="0"></span>
+                            <span class="dot" data-index="1"></span>
+                            <span class="dot" data-index="2"></span>
+                        </div>
+                        <button class="ctrl-btn" id="next-slide" aria-label="Next Slide">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <section class="faqs-section" id="faqs">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Got Questions?</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-desc">Everything you need to know about our robotics programs, hardware kits, and schedule.</p>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-item" id="faq-1">
+                        <button class="faq-trigger">
+                            <span>Does my child need prior programming experience?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-panel">
+                            <p>No prior coding or technical knowledge is needed! Our courses start with fundamental motor building (Ages 5-8) and electronics (Ages 8-10) before guiding kids to programming (Ages 10-12) and advanced syntax (Ages 13-15).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" id="faq-2">
+                        <button class="faq-trigger">
+                            <span>Are the robotics kits provided to the students?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-panel">
+                            <p>Yes, all physical robotic building blocks, electronic sensors, microcontrollers, and gears are provided for classroom training. For home practice and homework, we offer hardware kits included with specific course enrollment plans.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" id="faq-3">
+                        <button class="faq-trigger">
+                            <span>What are the options for online vs. offline classes?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-panel">
+                            <p>We provide both physical centers for hands-on classroom training and online live sessions. For online learning, hardware kits are shipped directly to your home, and instructors teach face-to-face via interactive video platforms.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" id="faq-4">
+                        <button class="faq-trigger">
+                            <span>What is the duration and schedule of the courses?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-panel">
+                            <p>Courses range from 3 to 8 months, with classes held twice a week (typically on weekends or after-school hours). Sessions are 90 minutes long, focusing on 30 minutes of theory/concepts and 60 minutes of active assembly and testing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <a href="#" class="logo footer-logo">
+                    <div class="logo-icon"><i class="fa-solid fa-robot"></i></div>
+                    <span>Brightfox Edu Tech</span>
+                </a>
+                <p>Developing essential 21st-century engineering and coding skills in young minds through active, guided exploration and project building.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#robolab">Virtual RoboLab</a></li>
+                    <li><a href="#benefits">Why Us</a></li>
+                    <li><a href="#journey">Learning Journey</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Details</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Brightfox Tower, Poonamallee High Road, Chennai Central, Chennai - 600003</p>
+                <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fa-solid fa-envelope"></i> admissions@brightfoxedutech.com</p>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Join Our Newsletter</h3>
+                <p>Get latest updates about coding competitions, trial slots, and cool robotics projects.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required aria-label="Email for Newsletter">
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+                <div class="newsletter-msg" id="newsletter-success">Subscribed successfully!</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Brightfox Edu Tech. All rights reserved. Designed for young builders.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal-overlay" id="booking-modal">
+        <div class="modal-content glassmorphism">
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-header">
+                <h2>Book a Free Trial Class!</h2>
+                <p>Fill out the form below. Our academy counselor will schedule your child's 45-minute online/offline trial slot.</p>
+            </div>
+            
+            <form class="booking-form" id="booking-form" novalidate>
+                <!-- Parent Info -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="parent-name">Parent Name*</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="parent-name" placeholder="John Doe" required>
+                        </div>
+                        <span class="error-msg" id="err-parent-name">Please enter your name</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parent-email">Parent Email*</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="parent-email" placeholder="john@example.com" required>
+                        </div>
+                        <span class="error-msg" id="err-parent-email">Please enter a valid email address</span>
+                    </div>
+                </div>
+
+                <!-- Contact & Kid Info -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="parent-phone">Phone Number*</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="parent-phone" placeholder="9876543210" required>
+                        </div>
+                        <span class="error-msg" id="err-parent-phone">Please enter a valid 10-digit number</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kid-age">Kid's Age*</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-child"></i>
+                            <select id="kid-age" required>
+                                <option value="" disabled selected>Select age</option>
+                                <option value="5">5 Years</option>
+                                <option value="6">6 Years</option>
+                                <option value="7">7 Years</option>
+                                <option value="8">8 Years</option>
+                                <option value="9">9 Years</option>
+                                <option value="10">10 Years</option>
+                                <option value="11">11 Years</option>
+                                <option value="12">12 Years</option>
+                                <option value="13">13 Years</option>
+                                <option value="14">14 Years</option>
+                                <option value="15">15 Years</option>
+                            </select>
+                        </div>
+                        <span class="error-msg" id="err-kid-age">Please select your child's age</span>
+                    </div>
+                </div>
+
+                <!-- Mode & Timings -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="class-format">Class Format*</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-laptop"></i>
+                            <select id="class-format" required>
+                                <option value="offline" selected>Offline (At Center)</option>
+                                <option value="online">Online (Home Learning)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pref-slot">Preferred Slot*</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <select id="pref-slot" required>
+                                <option value="" disabled selected>Select day & time</option>
+                                <option value="sat-morning">Saturday Morning (10 AM - 11:30 AM)</option>
+                                <option value="sat-evening">Saturday Evening (4 PM - 5:30 PM)</option>
+                                <option value="sun-morning">Sunday Morning (10 AM - 11:30 AM)</option>
+                                <option value="sun-evening">Sunday Evening (4 PM - 5:30 PM)</option>
+                            </select>
+                        </div>
+                        <span class="error-msg" id="err-pref-slot">Please select a time slot</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full" id="booking-submit-btn">
+                    <span>Submit & Book Slots</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+            
+            <!-- Success Message Screen -->
+            <div class="modal-success-screen" id="modal-success-screen">
+                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h3>Trial Registered Successfully!</h3>
+                <p>Thank you, <strong id="success-parent-name">Parent</strong>! We have registered a slot on <strong id="success-time-slot">Slot</strong>. A calendar invite and WhatsApp confirmation has been sent to <strong id="success-phone">Phone</strong>.</p>
+                <button class="btn btn-primary" id="success-close-btn">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
